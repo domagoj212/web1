@@ -1,0 +1,20 @@
+# robots.txt for https://kti.hr
+
+User-agent: *
+Allow: /
+
+# Disallow template files
+Disallow: /blog-posts/TEMPLATE-*
+
+# Sitemap location
+Sitemap: https://kti.hr/sitemap.xml
+
+# Allow Google and other search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Konstrukt Tech Inženjering</title>
+    <meta name="description" content="Blog o građevinarstvu, inženjerstvu i digitalnim rješenjima - savjeti, trendovi i stručni članci">
+    <meta name="keywords" content="građevinarstvo, inženjering, digitalna transformacija, projektiranje, tehnologija">
+
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lexend font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Konstrukt Tech Inženjering d.o.o.</a></div>
+            <a href="index.html#o-nama" data-i18n="nav.about">O nama</a>
+            <a href="index.html#usluge" data-i18n="nav.services">Naše usluge</a>
+            <a href="index.html#projekti" data-i18n="nav.projects">Projekti</a>
+            <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+            <a href="index.html#kontakt" data-i18n="nav.contact">Kontakt</a>
+            <button id="langToggle" class="lang-toggle" aria-label="Switch language">HR</button>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1 data-i18n="blog.title">Blog</h1>
+            <p data-i18n="blog.subtitle">Stručni članci, savjeti i insights iz svijeta građevinarstva i digitalnih rješenja</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-section">
+        <div class="blog-grid">
+            
+            <!-- Blog Post 1 - Featured -->
+            <article class="blog-post featured">
+                <a href="blog-posts/powerbi-u-gradjevinarstvu.html" class="blog-link">
+                    <div class="blog-image" style="background-image: url('pics/soft dev.jpg')"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" data-i18n="blog.posts.powerbi.date">3. Siječanj 2026</span>
+                            <span class="blog-category" data-i18n="blog.posts.powerbi.category">Digitalizacija</span>
+                        </div>
+                        <h2 data-i18n="blog.posts.powerbi.title">PowerBI u građevinarstvu - koristan alat ili samo još jedna aplikacija?</h2>
+                        <p data-i18n="blog.posts.powerbi.excerpt">Iskustva iskusnog inženjera: kako je PowerBI promijenio način upravljanja projektima kroz geolokaciju, povezivanje dokumentacije, AI RAG i visualizaciju podataka. Stvarni primjeri ušteđenog vremena i poboljšane efikasnosti.</p>
+                        <span class="read-more" data-i18n="blog.readMore">Pročitaj više →</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <a href="blog-posts/digitalna-transformacija-gradjevinarstvo.html" class="blog-link">
+                    <div class="blog-image" style="background-image: url('pics/skyline.jpg')"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date" data-i18n="blog.posts.digital.date">15. Prosinac 2025</span>
+                            <span class="blog-category" data-i18n="blog.posts.digital.category">Digitalizacija</span>
+                        </div>
+                        <h3 data-i18n="blog.posts.digital.title">Digitalna transformacija u građevinarstvu: Budućnost je sada</h3>
+                        <p data-i18n="blog.posts.digital.excerpt">Kako digitalna rješenja mijenjaju način na koji projektiramo i gradimo. Istražujemo najnovije trendove u BIM tehnologiji, AI u projektiranju i automatizaciji.</p>
+                        <span class="read-more" data-i18n="blog.readMore">Pročitaj više →</span>
+                    </div>
+                </a>
+            </article>
+
+
+        </div>
+
+        <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2 data-i18n="blog.newsletter.title">Pretplatite se na naš newsletter</h2>
+            <p data-i18n="blog.newsletter.subtitle">Budite u toku s najnovijim člancima i vijestima iz industrije</p>
+            <form class="newsletter-form">
+                <input type="email" data-i18n="blog.newsletter.placeholder" placeholder="Vaša email adresa" required>
+                <button type="submit" data-i18n="blog.newsletter.button">Pretplati se</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <h3 data-i18n="footer.contact">Kontakt</h3>
+                <p><a href="mailto:info@kti.hr">info@kti.hr</a></p>
+                <p><a href="https://kti.hr" target="_blank" rel="noopener">kti.hr</a></p>
+                <p><a href="https://javna.eu" target="_blank" rel="noopener">javna.eu</a></p>
+            </div>
+            <div class="footer-middle">
+                <h3 data-i18n="footer.company">Tvrtka</h3>
+                <p>Konstrukt Tech Inženjering d.o.o.</p>
+                <p>OIB: 77716852761</p>
+                <p>23000 Zadar</p>
+                <p data-i18n="footer.companyInfo">Upisan u registar Trgovačkog suda u Zadru,<br>temeljni kapital 2500 € uplaćen u cijelosti</p>
+            </div>
+            <div>
+                <h3 data-i18n="footer.follow">Pratite nas</h3>
+                <p><a href="#" target="_blank" class="linkedin-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0077b5">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Footer -->
+    <div class="subfooter">
+        <p>Sva prava pridržana Konstrukt Tech Inženjering d.o.o. Svi podaci su informativnog karaktera</p>
+    </div> data-i18n="footer.copyright"
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

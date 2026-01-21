@@ -1,0 +1,152 @@
+{
+  "hr": {
+    "nav": {
+      "about": "O nama",
+      "services": "Naše usluge",
+      "projects": "Projekti",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "title": "Konstrukt Tech Inženjering d.o.o.",
+      "subtitle": "Projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih sofverskih alata, savjetovanje."
+    },
+    "services": {
+      "title": "Naše usluge",
+      "digital": {
+        "title": "Digitalne usluge",
+        "desc": "Usluge razvoja specijalnih digitalnih rješenja i alata za građevinarstvo i srodne struke",
+        "items": [
+          "•Razvoj tailor-made aplikacija i web aplikacija",
+          "•Razvoj aplikacija za korporativno okruženje M365 (PowerApps, PowerBI, Azure Functions...)",
+          "•Predgotovljeni ili tailor-made dashboardovi i analitike podataka",
+          "•Savjetovanje i implementacija digitalnih rješenja u području građevinarstva",
+          "•Digitalne usluge u području javne nabave",
+          "•Digitalne usluge i alati u području upravljanja projektima gradnje te contract managementa"
+        ]
+      },
+      "engineering": {
+        "title": "Projektiranje i nadzor",
+        "desc": "Glavni i izvedbeni projekti, stručni nadzor i vođenje projekata",
+        "items": [
+          "•Glavni i izvedbeni projekti konstrukcija betonskih i zidanih kuća",
+          "•Glavni i izvedbeni projekti konstrukcije obnove povijesnih, kamenih i ostalih konstrukcija",
+          "•Glavni projekti čeličnih konstrukcija te projekti skele",
+          "•Stručni nadzor obiteljskih kuća i stambenih građevina",
+          "•Vođenje projekata obiteljskih kuća te renovacija i rekonstrukcija"
+        ]
+      }
+    },
+    "about": {
+      "title": "O nama",
+      "text": "Mi smo ovlašteni inženjeri građevinarstva i drugi stručnjaci specijalizirani za građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna i digitalna rješenja u građevinarstvu."
+    },
+    "footer": {
+      "contact": "Kontakt",
+      "company": "Tvrtka",
+      "companyInfo": "Upisan u registar Trgovačkog suda u Zadru,<br>temeljni kapital 2500 € uplaćen u cijelosti",
+      "follow": "Pratite nas",
+      "copyright": "Sva prava pridržana Konstrukt Tech Inženjering d.o.o. Svi podaci su informativnog karaktera"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Stručni članci, savjeti i insights iz svijeta građevinarstva i digitalnih rješenja",
+      "readMore": "Pročitaj više →",
+      "newsletter": {
+        "title": "Pretplatite se na naš newsletter",
+        "subtitle": "Budite u toku s najnovijim člancima i vijestima iz industrije",
+        "placeholder": "Vaša email adresa",
+        "button": "Pretplati se"
+      },
+      "posts": {
+        "powerbi": {
+          "date": "3. Siječanj 2026",
+          "category": "Digitalizacija",
+          "title": "PowerBI u građevinarstvu - koristan alat ili samo još jedna aplikacija?",
+          "excerpt": "Iskustva iskusnog inženjera: kako je PowerBI promijenio način upravljanja projektima kroz geolokaciju, povezivanje dokumentacije, AI RAG i visualizaciju podataka. Stvarni primjeri ušteđenog vremena i poboljšane efikasnosti."
+        },
+        "digital": {
+          "date": "15. Prosinac 2025",
+          "category": "Digitalizacija",
+          "title": "Digitalna transformacija u građevinarstvu: Budućnost je sada",
+          "excerpt": "Kako digitalna rješenja mijenjaju način na koji projektiramo i gradimo. Istražujemo najnovije trendove u BIM tehnologiji, AI u projektiranju i automatizaciji."
+        }
+      }
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About Us",
+      "services": "Our Services",
+      "projects": "Projects",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Konstrukt Tech Inženjering d.o.o.",
+      "subtitle": "Structural design, expert construction supervision, specialized software development, consulting."
+    },
+    "services": {
+      "title": "Our Services",
+      "digital": {
+        "title": "Digital Services",
+        "desc": "Development of specialized digital solutions and tools for construction and related industries",
+        "items": [
+          "•Development of tailor-made applications and web applications",
+          "•M365 corporate environment applications (PowerApps, PowerBI, Azure Functions...)",
+          "•Pre-built or custom dashboards and data analytics",
+          "•Consulting and implementation of digital solutions in construction",
+          "•Digital services for public procurement",
+          "•Digital services and tools for construction project management and contract management"
+        ]
+      },
+      "engineering": {
+        "title": "Design & Supervision",
+        "desc": "Main and detailed projects, expert supervision and project management",
+        "items": [
+          "•Main and detailed structural projects for concrete and masonry houses",
+          "•Main and detailed structural projects for renovation of historic, stone and other structures",
+          "•Main projects for steel structures and scaffolding projects",
+          "•Expert supervision of residential houses and buildings",
+          "•Project management for residential houses, renovations and reconstructions"
+        ]
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "text": "We are certified civil engineers and other professionals specialized in construction and related services, with a special focus on digitalization and innovative digital solutions in construction."
+    },
+    "footer": {
+      "contact": "Contact",
+      "company": "Company",
+      "companyInfo": "Registered in the Commercial Court in Zadar,<br>share capital of €2,500 fully paid",
+      "follow": "Follow Us",
+      "copyright": "All rights reserved Konstrukt Tech Inženjering d.o.o. All information is for informational purposes"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Expert articles, tips and insights from the world of construction and digital solutions",
+      "readMore": "Read more →",
+      "newsletter": {
+        "title": "Subscribe to our newsletter",
+        "subtitle": "Stay updated with the latest articles and industry news",
+        "placeholder": "Your email address",
+        "button": "Subscribe"
+      },
+      "posts": {
+        "powerbi": {
+          "date": "January 3, 2026",
+          "category": "Digitalization",
+          "title": "PowerBI in Construction - Useful Tool or Just Another App?",
+          "excerpt": "An experienced engineer's insights: how PowerBI transformed project management through geolocation, documentation linking, AI RAG, and data visualization. Real examples of saved time and improved efficiency."
+        },
+        "digital": {
+          "date": "December 15, 2025",
+          "category": "Digitalization",
+          "title": "Digital Transformation in Construction: The Future is Now",
+          "excerpt": "How digital solutions are changing the way we design and build. Exploring the latest trends in BIM technology, AI in design, and automation."
+        }
+      }
+    }
+  }
+}

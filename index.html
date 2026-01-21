@@ -3,74 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistička Web Stranica</title>
+    <title>Projektiranje Zadar | Statičar Zadar | Glavni Projekt | Građevinski Inženjer Zadar</title>
+    <meta name="description" content="Statičar Zadar | Ovlašteni građevinski inženjer za projektiranje u Zadru. Licensed structural & civil engineer. Glavni projekti konstrukcija, izvedbeni projekti, stručni nadzor. Digitalna rješenja i BIM tehnologija za građevinarstvo.">
+    <meta name="keywords" content="statičar zadar, projektiranje zadar, građevinski inženjer zadar, glavni projekt zadar, ovlašteni inženjer zadar, projektiranje konstrukcija zadar, izvedbeni projekt zadar, ovlašteni statičar, građevinarstvo zadar, structural engineer zadar, civil engineer zadar, structural design zadar, main project zadar, licensed engineer zadar, construction zadar, BIM technology, stručni nadzor zadar">
+    <meta name="author" content="Konstrukt Tech Inženjering d.o.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kti.hr">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kti.hr/sitemap.xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kti.hr">
+    <meta property="og:title" content="Projektiranje Zadar | Statičar Zadar | Građevinski Inženjer">
+    <meta property="og:description" content="Ovlašteni statičar i građevinski inženjer u Zadru. Glavni projekti, projektiranje konstrukcija, stručni nadzor i digitalna rješenja.">
+    <meta property="og:image" content="https://kti.hr/pics/blend.png">
+    <meta property="og:locale" content="hr_HR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Konstrukt Tech Inženjering | Projektiranje i Digitalna Rješenja">
+    <meta name="twitter:description" content="Statičar i građevinski inženjer u Zadru. Glavni projekti konstrukcija i digitalna rješenja.">
 
     <!-- Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lexend font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "name": "Konstrukt Tech Inženjering d.o.o.",
+      "image": "https://kti.hr/pics/blend.png",
+      "description": "Ovlašteni statičar i građevinski inženjer u Zadru. Projektiranje konstrukcija, glavni projekti, izvedbeni projekti, stručni nadzor i digitalna rješenja za građevinarstvo.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zadar",
+        "postalCode": "23000",
+        "addressCountry": "HR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44.119371",
+        "longitude": "15.242110"
+      },
+      "url": "https://kti.hr",
+      "email": "info@kti.hr",
+      "priceRange": "€€",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Zadar"
+        },
+        {
+          "@type": "Country",
+          "name": "Hrvatska"
+        }
+      ],
+      "serviceType": ["Projektiranje konstrukcija", "Glavni projekt", "Izvedbeni projekt", "Statičar", "Građevinski inženjer", "Stručni nadzor", "Digitalna rješenja", "BIM tehnologija"]
+    }
+    </script>
+    
+    <!-- Additional Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Početna",
+        "item": "https://kti.hr"
+      }]
+    }
+    </script>
 </head>
 <body>
 
     <!-- Navigacija -->
     <header>
         <nav>
-            <a href="#o-nama">O nama</a>
-            <a href="#usluge">Naše usluge</a>
-            <a href="#projekti">Projekti</a>
-            <a href="#kontakt">Kontakt</a>
+            <div class="logo">Konstrukt Tech Inženjering d.o.o.</div>
+            <a href="#o-nama" data-i18n="nav.about">O nama</a>
+            <a href="#usluge" data-i18n="nav.services">Naše usluge</a>
+            <!--<a href="#projekti" data-i18n="nav.projects">Projekti</a>-->
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+            <button id="langToggle" class="lang-toggle" aria-label="Switch language">HR</button>
         </nav>
     </header>
 
     <!-- Hero / početna sekcija -->
     <section class="hero">
-        <h1>Dobrodošli na našu stranicu</h1>
-        <p>Minimalistički i moderni pristup s čistim dizajnom i elegantnim izgledom. Ovdje možete dodati kratki opis vaše tvrtke ili usluge.</p>
-    </section>
-
-    <!-- O nama -->
-    <section id="o-nama">
-        <h2>O nama</h2>
-        <p>Ovdje možete napisati tko ste, čime se bavite i što vas čini posebnima.</p>
+        <div class="hero-content">
+            <h1 style="font-family: 'Lexend', sans-serif; color: #00d4ff;" data-i18n="hero.title">Konstrukt Tech Inženjering d.o.o.</h1>
+            <p data-i18n="hero.subtitle">Ovlašteni statičar i građevinski inženjer u Zadru. Glavni projekti, projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih sofverskih alata, savjetovanje.</p>
+        </div>
+        <div class="hero-image">
+            <img src="pics/blend.png" alt="Konstrukt Tech Inženjering - Digitalna rješenja za građevinarstvo i BIM tehnologija">
+        </div>
     </section>
 
     <!-- Naše usluge -->
     <section id="usluge">
-        <h2>Naše usluge</h2>
-        <p>Prikaz usluga ili proizvoda koje nudite s kratkim opisima ili ikonama.</p>
+        <h2 data-i18n="services.title">Naše usluge</h2>
+        <div class="accordions">
+            <div class="accordion-card">
+                <div class="accordion-image" style="background-image: url('pics/soft dev.jpg')"></div>
+                <h3 class="accordion-title" data-i18n="services.digital.title">Digitalne usluge</h3>
+                <div class="accordion-dropdown">
+                    <p>Usluge razvoja specijalnih digitalnih rješenja i alata za građevinarstvo i srodne struke</p>
+                    <p>•Razvoj tailor-made aplikacija i web aplikacija</p>
+                    <p>•Razvoj aplikacija za korporativno okruženje M365 (PowerApps, PowerBI, Azure Functions...) </p>
+                    <p>•Predgotovljeni ili tailor-made dashboardovi i analitike podataka</p>
+                    <p>•Savjetovanje i implementacija digitalnih rješenja u području građevinarstva </p>
+                    <p>•Digitalne usluge u području javne nabave</p>
+                    <p>•Digitalne usluge i alati u području upravljanja projektima gradnje te contract managementa</p>
+                </div>
+            </div>
+
+            <div class="accordion-card">
+                <div class="accordion-image" style="background-image: url('pics/skyline.jpg')"></div>
+                <h3 class="accordion-title" data-i18n="services.engineering.title">Projektiranje i nadzor - Statičar Zadar</h3>
+                <div class="accordion-dropdown">
+                    <p><strong>Ovlašteni građevinski inženjer u Zadru</strong> - Glavni i izvedbeni projekti konstrukcija, stručni nadzor i vođenje projekata</p>
+                    <p>•Glavni projekti i izvedbeni projekti konstrukcija betonskih i zidanih kuća u Zadru</p>
+                    <p>•Glavni projekti konstrukcije obnove povijesnih, kamenih i ostalih konstrukcija</p>
+                    <p>•Projektiranje čeličnih konstrukcija te projekti skele</p>
+                    <p>•Stručni nadzor obiteljskih kuća i stambenih građevina</p>
+                    <p>•Vođenje projekata obiteljskih kuća te renovacija i rekonstrukcija</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Projekti -->
+    <!-- O nama -->
+    <section id="o-nama">
+        <h2 data-i18n="about.title">O nama</h2>
+        <p data-i18n="about.text">Mi smo ovlašteni građevinski inženjeri i statičari u Zadru, specijalizirani za projektiranje konstrukcija, izradu glavnih i izvedbenih projekata te druge građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna digitalna rješenja u građevinarstvu.</p>
+    </section>
+
+    <!-- Projekti - HIDDEN FOR NOW -->
+    <!--
     <section id="projekti">
         <h2>Projekti</h2>
         <p>Prikaz vaših ranijih projekata s fotografijama ili linkovima.</p>
     </section>
+    -->
 
-    <!-- Kontakt -->
+    <!-- Kontakt Form -->
     <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Informacije za kontakt, formular za slanje poruke ili mapa.</p>
+        <h2 data-i18n="contact.title">Kontaktirajte nas</h2>
+        <p data-i18n="contact.subtitle">Imate pitanja o projektiranju, glavnom projektu ili digitalnim rješenjima? Kliknite na gumb ispod!</p>
+        
+        <div class="accordions" style="grid-template-columns: 1fr; max-width: 700px;">
+            <div class="accordion-card" id="contact-accordion">
+                <h3 class="accordion-title" data-i18n="contact.formTitle">📧 Pošaljite nam poruku</h3>
+                <div class="accordion-dropdown" id="contact-form-dropdown">
+                    <div id="form-message" class="form-message"></div>
+                    <form action="https://formspree.io/f/mkogrgyz" method="POST" class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.name">Ime i prezime *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-i18n="contact.phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.subject">Predmet *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.message">Poruka *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" data-i18n="contact.submit">Pošalji poruku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div>
-                <h3>Naša Tvrtka</h3>
-                <p>&copy; 2025 Naša Tvrtka. Sva prava pridržana.</p>
+                <h3 data-i18n="footer.contact">Kontakt</h3>
+                <p><a href="mailto:info@kti.hr">info@kti.hr</a></p>
+                <p><a href="https://kti.hr" target="_blank" rel="noopener">kti.hr</a></p>
+                <p><a href="https://javna.eu" target="_blank" rel="noopener">javna.eu</a></p>
+            </div>
+            <div class="footer-middle">
+                <h3 data-i18n="footer.company">Tvrtka</h3>
+                <p>Konstrukt Tech Inženjering d.o.o.</p>
+                <p>OIB: 77716852761</p>
+                <p>23000 Zadar</p>
+                <p data-i18n="footer.companyInfo">Upisan u registar Trgovačkog suda u Zadru,<br>temeljni kapital 2500 € uplaćen u cijelosti</p>
             </div>
             <div>
-                <h3>Kontakt</h3>
-                <p>Email: info@nasa-tvrtka.hr</p>
-                <p>Telefon: +385 91 123 4567</p>
-            </div>
-            <div>
-                <h3>Pratite nas</h3>
-                <p><a href="#">LinkedIn</a></p>
+                <h3 data-i18n="footer.follow">Pratite nas</h3>
+                <p><a href="#" target="_blank" class="linkedin-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0077b5">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Copyright Footer -->
+    <div class="subfooter">
+        <p data-i18n="footer.copyright">Sva prava pridržana Konstrukt Tech Inženjering d.o.o. Svi podaci su informativnog karaktera</p>
+    </div>
 
     <!-- JS (placeholder) -->
     <script src="script.js"></script>
