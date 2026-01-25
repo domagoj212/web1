@@ -761,13 +761,32 @@ nav a.active {
 /* Responsive */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-wrap: wrap;
         height: auto;
-        padding: 10px 0;
+        padding: 10px 15px;
+        gap: 10px;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .logo {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 5px;
+        margin-right: 0;
     }
 
     nav a {
-        margin: 10px 0;
+        margin: 0;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        white-space: nowrap;
+    }
+
+    .lang-toggle {
+        margin-left: 0;
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 
     .hero {
