@@ -1,21 +1,20 @@
-# TenderAtlas - robots.txt
-# https://tenderatlas.hr
+# robots.txt for https://kti.hr
 
 User-agent: *
 Allow: /
 
-# Blokiraj privatne/interne direktorije
-Disallow: /318df855l3x/
-Disallow: /app/
-Disallow: /app2/
-Disallow: /subp1/
-Disallow: /auth43315fa.html
+# Disallow template files
+Disallow: /blog-posts/TEMPLATE-*
 
-# Blokiraj duplikat stranice (canonical je opci-uvjeti.html)
-Disallow: /uvjeti.html
+# Sitemap location
+Sitemap: https://kti.hr/sitemap.xml
 
-# Blokiraj medijske datoteke koje ne trebaju indeksiranje
-Disallow: /*.mp4$
+# Allow Google and other search engines
+User-agent: Googlebot
+Allow: /
 
-# Sitemap lokacija
-Sitemap: https://tenderatlas.hr/sitemap.xml
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
