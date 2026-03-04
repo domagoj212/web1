@@ -17,23 +17,23 @@
         "title": "Digitalne usluge",
         "desc": "Usluge razvoja specijalnih digitalnih rješenja i alata za građevinarstvo i srodne struke",
         "items": [
-          "•Razvoj tailor-made aplikacija i web aplikacija",
-          "•Razvoj aplikacija za korporativno okruženje M365 (PowerApps, PowerBI, Azure Functions...)",
-          "•Predgotovljeni ili tailor-made dashboardovi i analitike podataka",
-          "•Savjetovanje i implementacija digitalnih rješenja u području građevinarstva",
-          "•Digitalne usluge u području javne nabave",
-          "•Digitalne usluge i alati u području upravljanja projektima gradnje te contract managementa"
+          "Razvoj tailor-made aplikacija i web aplikacija",
+          "Razvoj aplikacija za korporativno okruženje M365 (PowerApps, PowerBI, Azure Functions...)",
+          "Predgotovljeni ili tailor-made dashboardovi i analitike podataka",
+          "Savjetovanje i implementacija digitalnih rješenja u području građevinarstva",
+          "Digitalne usluge u području javne nabave",
+          "Digitalne usluge i alati u području upravljanja projektima gradnje te contract managementa"
         ]
       },
       "engineering": {
         "title": "Projektiranje i nadzor",
         "desc": "Glavni i izvedbeni projekti, stručni nadzor i vođenje projekata",
         "items": [
-          "•Glavni i izvedbeni projekti konstrukcija betonskih i zidanih kuća",
-          "•Glavni i izvedbeni projekti konstrukcije obnove povijesnih, kamenih i ostalih konstrukcija",
-          "•Glavni projekti čeličnih konstrukcija te projekti skele",
-          "•Stručni nadzor obiteljskih kuća i stambenih građevina",
-          "•Vođenje projekata obiteljskih kuća te renovacija i rekonstrukcija"
+          "Glavni i izvedbeni projekti konstrukcija betonskih i zidanih kuća",
+          "Glavni i izvedbeni projekti konstrukcije obnove povijesnih, kamenih i ostalih konstrukcija",
+          "Glavni projekti čeličnih konstrukcija te projekti skele",
+          "Stručni nadzor obiteljskih kuća i stambenih građevina",
+          "Vođenje projekata obiteljskih kuća te renovacija i rekonstrukcija"
         ]
       }
     },
@@ -92,23 +92,23 @@
         "title": "Digital Services",
         "desc": "Development of specialized digital solutions and tools for construction and related industries",
         "items": [
-          "•Development of tailor-made applications and web applications",
-          "•M365 corporate environment applications (PowerApps, PowerBI, Azure Functions...)",
-          "•Pre-built or custom dashboards and data analytics",
-          "•Consulting and implementation of digital solutions in construction",
-          "•Digital services for public procurement",
-          "•Digital services and tools for construction project management and contract management"
+          "Development of tailor-made applications and web applications",
+          "M365 corporate environment applications (PowerApps, PowerBI, Azure Functions...)",
+          "Pre-built or custom dashboards and data analytics",
+          "Consulting and implementation of digital solutions in construction",
+          "Digital services for public procurement",
+          "Digital services and tools for construction project management and contract management"
         ]
       },
       "engineering": {
         "title": "Design & Supervision",
         "desc": "Main and detailed projects, expert supervision and project management",
         "items": [
-          "•Main and detailed structural projects for concrete and masonry houses",
-          "•Main and detailed structural projects for renovation of historic, stone and other structures",
-          "•Main projects for steel structures and scaffolding projects",
-          "•Expert supervision of residential houses and buildings",
-          "•Project management for residential houses, renovations and reconstructions"
+          "Main and detailed structural projects for concrete and masonry houses",
+          "Main and detailed structural projects for renovation of historic, stone and other structures",
+          "Main projects for steel structures and scaffolding projects",
+          "Expert supervision of residential houses and buildings",
+          "Project management for residential houses, renovations and reconstructions"
         ]
       }
     },

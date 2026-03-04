@@ -51,18 +51,18 @@ function updateServiceItems() {
     const t = translations[currentLang];
     if (!t) return;
 
-    // Digital services
-    const digitalItems = document.querySelector('.accordion-card:nth-child(1) .accordion-dropdown');
-    if (digitalItems && t.services.digital.items) {
-        const itemsHTML = t.services.digital.items.map(item => `<p>${item}</p>`).join('');
-        digitalItems.innerHTML = `<p>${t.services.digital.desc}</p>${itemsHTML}`;
+    // Engineering services (first card)
+    const engineeringItems = document.querySelector('.accordion-card:nth-child(1) .accordion-dropdown');
+    if (engineeringItems && t.services.engineering.items) {
+        const itemsHTML = t.services.engineering.items.map(item => `<li>${item}</li>`).join('');
+        engineeringItems.innerHTML = `<p class="accordion-lead">${t.services.engineering.desc}</p><ul class="accordion-list">${itemsHTML}</ul>`;
     }
 
-    // Engineering services
-    const engineeringItems = document.querySelector('.accordion-card:nth-child(2) .accordion-dropdown');
-    if (engineeringItems && t.services.engineering.items) {
-        const itemsHTML = t.services.engineering.items.map(item => `<p>${item}</p>`).join('');
-        engineeringItems.innerHTML = `<p>${t.services.engineering.desc}</p>${itemsHTML}`;
+    // Digital services (second card)
+    const digitalItems = document.querySelector('.accordion-card:nth-child(2) .accordion-dropdown');
+    if (digitalItems && t.services.digital.items) {
+        const itemsHTML = t.services.digital.items.map(item => `<li>${item}</li>`).join('');
+        digitalItems.innerHTML = `<p class="accordion-lead">${t.services.digital.desc}</p><ul class="accordion-list">${itemsHTML}</ul>`;
     }
 }
 
