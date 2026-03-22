@@ -8,8 +8,10 @@
     <meta name="keywords" content="statičar zadar, projektiranje zadar, građevinski inženjer zadar, glavni projekt zadar, ovlašteni inženjer zadar, projektiranje konstrukcija zadar, izvedbeni projekt zadar, ovlašteni statičar, građevinarstvo zadar, structural engineer zadar, civil engineer zadar, structural design zadar, main project zadar, licensed engineer zadar, construction zadar, BIM technology, stručni nadzor zadar">
     <meta name="author" content="Konstrukt Tech Inženjering d.o.o.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
     <link rel="canonical" href="https://kti.hr">
-    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230f172a'/><text y='78' x='12' font-size='72' font-family='system-ui,sans-serif' font-weight='700' fill='%2300d4ff'>K</text></svg>">
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kti.hr/sitemap.xml">
 
@@ -25,10 +27,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Konstrukt Tech Inženjering | Projektiranje i Digitalna Rješenja">
     <meta name="twitter:description" content="Statičar i građevinski inženjer u Zadru. Glavni projekti konstrukcija i digitalna rješenja.">
+    <meta name="twitter:image" content="https://kti.hr/pics/blend.png">
 
     <!-- Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Lexend font -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -58,20 +61,13 @@
       "email": "info@kti.hr",
       "priceRange": "€€",
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Zadar"
-        },
-        {
-          "@type": "Country",
-          "name": "Hrvatska"
-        }
+        { "@type": "City",    "name": "Zadar"    },
+        { "@type": "Country", "name": "Hrvatska" }
       ],
       "serviceType": ["Projektiranje konstrukcija", "Glavni projekt", "Izvedbeni projekt", "Statičar", "Građevinski inženjer", "Stručni nadzor", "Digitalna rješenja", "BIM tehnologija"]
     }
     </script>
-    
-    <!-- Additional Schema: BreadcrumbList -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -91,119 +87,354 @@
     <header>
         <nav>
             <div class="logo">Konstrukt Tech Inženjering d.o.o.</div>
-            <a href="#o-nama" data-i18n="nav.about">O nama</a>
-            <a href="#usluge" data-i18n="nav.services">Naše usluge</a>
-            <!--<a href="#projekti" data-i18n="nav.projects">Projekti</a>-->
+            <a href="#o-nama"  data-i18n="nav.about">O nama</a>
+            <a href="#usluge"  data-i18n="nav.services">Naše usluge</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
             <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
             <button id="langToggle" class="lang-toggle" aria-label="Switch language">HR</button>
         </nav>
     </header>
 
-    <!-- Hero / početna sekcija -->
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-eyebrow">Zadar, Hrvatska</span>
             <h1 data-i18n="hero.title">Konstrukt Tech Inženjering d.o.o.</h1>
-            <p data-i18n="hero.subtitle">Ovlašteni statičar i građevinski inženjer u Zadru. Glavni projekti, projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih sofverskih alata, savjetovanje.</p>
+            <p data-i18n="hero.subtitle">Glavni projekti, projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih softverskih alata, savjetovanje.</p>
+
             <div class="hero-cta">
-                <a href="#usluge" class="btn-primary">Naše usluge →</a>
-                <a href="#kontakt" class="btn-secondary">Kontaktirajte nas</a>
+                <a href="#usluge" class="btn-primary" data-i18n="hero.cta1">Naše usluge →</a>
+                <a href="#kontakt" class="btn-secondary" data-i18n="hero.cta2">Kontaktirajte nas</a>
+            </div>
+
+            <div class="hero-pills">
+                <span class="hero-pill" data-i18n="hero.pill1">Ovlašteni inženjeri</span>
+                <span class="hero-pill" data-i18n="hero.pill2">BIM Tehnologija</span>
+                <span class="hero-pill" data-i18n="hero.pill3">Digitalna rješenja</span>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="hero-image-wrap">
-                <img src="pics/blend.png" alt="Konstrukt Tech Inženjering - Digitalna rješenja za građevinarstvo i BIM tehnologija">
+
+        <!-- IFC Viewer -->
+        <div class="hero-viewer">
+            <div id="ifc-viewer-container">
+                <!-- Loading overlay -->
+                <div id="ifc-loading" class="ifc-loading">
+                    <div class="ifc-spinner"></div>
+                    <span id="ifc-loading-text">Inicijaliziram IFC viewer...</span>
+                    <div class="ifc-progress-track">
+                        <div id="ifc-progress-bar" class="ifc-progress-bar"></div>
+                    </div>
+                </div>
             </div>
+            <!-- Interaction hint -->
+            <div id="ifc-hint" class="ifc-hint">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span data-i18n="hero.ifcHint">Rotiraj · Zumiraj</span>
+            </div>
+            <!-- Label -->
+            <div class="ifc-label" data-i18n="hero.ifcLabel">BIM Model — Konstruktivni projekt</div>
         </div>
     </section>
 
     <!-- Naše usluge -->
     <section id="usluge">
-        <h2 data-i18n="services.title">Naše usluge</h2>
-        <div class="accordions">
-            <div class="accordion-card">
-                <div class="accordion-image" style="background-image: url('pics/skyline.jpg')"></div>
-                <h3 class="accordion-title" data-i18n="services.engineering.title">Projektiranje i nadzor — Statičar Zadar</h3>
-                <div class="accordion-dropdown">
-                    <p class="accordion-lead">Ovlašteni građevinski inženjer u Zadru — glavni i izvedbeni projekti konstrukcija, stručni nadzor i vođenje projekata.</p>
-                    <ul class="accordion-list">
-                        <li>Glavni i izvedbeni projekti betonskih i zidanih konstrukcija</li>
-                        <li>Obnova povijesnih i kamenih građevina</li>
-                        <li>Projektiranje čeličnih konstrukcija i skela</li>
-                        <li>Stručni nadzor stambenih građevina</li>
-                        <li>Vođenje projekata renovacija i rekonstrukcija</li>
-                    </ul>
-                </div>
+        <div class="section-inner">
+            <div class="section-chip-wrap">
+                <span class="section-chip">Usluge</span>
             </div>
+            <h2 data-i18n="services.title">Naše usluge</h2>
+            <p class="section-lead" data-i18n="services.lead">Graditeljska ekspertiza i digitalna inovacija — pod jednim krovom.</p>
 
-            <div class="accordion-card">
-                <div class="accordion-image" style="background-image: url('pics/soft dev.jpg')"></div>
-                <h3 class="accordion-title" data-i18n="services.digital.title">Digitalne usluge</h3>
-                <div class="accordion-dropdown">
-                    <p class="accordion-lead">Specijalna digitalna rješenja i alati za građevinarstvo i srodne struke.</p>
-                    <ul class="accordion-list">
-                        <li>Tailor-made web i desktop aplikacije</li>
-                        <li>M365 aplikacije — PowerApps, PowerBI, Azure Functions</li>
-                        <li>Dashboardovi i analitika podataka</li>
-                        <li>Digitalna rješenja u javnoj nabavi</li>
-                        <li>Alati za upravljanje projektima i contract management</li>
-                    </ul>
+            <div class="services-grid">
+
+                <!-- Panel 1: Inženjerstvo -->
+                <div class="service-panel fade-in">
+                    <div class="service-panel-body">
+                        <div class="sp-index">01</div>
+                        <span class="service-chip" data-i18n="services.engineering.chip">Inženjerstvo</span>
+                        <h3 data-i18n="services.engineering.title">Projektiranje i nadzor</h3>
+                        <p class="service-lead" data-i18n="services.engineering.lead">Ovlašteni građevinski inženjer u Zadru — glavni i izvedbeni projekti konstrukcija, stručni nadzor i vođenje projekata od ideje do predaje.</p>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+                                </div>
+                                <span data-i18n="services.engineering.items.0">Glavni i izvedbeni projekti betonskih i zidanih konstrukcija</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                                <span data-i18n="services.engineering.items.1">Obnova i rekonstrukcija povijesnih i kamenih građevina</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                                </div>
+                                <span data-i18n="services.engineering.items.2">Projektiranje čeličnih konstrukcija i privremenih skela</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </div>
+                                <span data-i18n="services.engineering.items.3">Stručni nadzor stambenih i poslovnih objekata</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                </div>
+                                <span data-i18n="services.engineering.items.4">Vođenje projekata renovacija i rekonstrukcija</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tools">
+                        <span class="service-tools-label" data-i18n="services.engineering.toolsLabel">Paketi koje koristimo</span>
+                        <div class="tool-logos">
+                            <a href="https://www.autodesk.com/products/autocad" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="AutoCAD">
+                                <img src="logos/logo grad/acad.png" alt="AutoCAD" class="tool-logo">
+                            </a>
+                            <a href="https://www.dlubal.com" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="Dlubal RFEM">
+                                <img src="logos/logo grad/dlubal.png" alt="Dlubal RFEM" class="tool-logo">
+                            </a>
+                            <a href="https://www.scia.net" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="SCIA Engineer">
+                                <img src="logos/logo grad/scia.png" alt="SCIA Engineer" class="tool-logo">
+                            </a>
+                            <a href="https://stadata.com/en/3-muri-project/" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="3Muri">
+                                <img src="logos/logo grad/3muri.png" alt="3Muri" class="tool-logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Panel 2: Digitalno -->
+                <div class="service-panel fade-in">
+                    <div class="service-panel-body">
+                        <div class="sp-index">02</div>
+                        <span class="service-chip service-chip--indigo" data-i18n="services.digital.chip">Digitalno</span>
+                        <h3 data-i18n="services.digital.title">Digitalne usluge</h3>
+                        <p class="service-lead" data-i18n="services.digital.lead">Specijalna digitalna rješenja i pametni alati za građevinarstvo, upravljanje projektima i automatizaciju poslovnih procesa.</p>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                </div>
+                                <span data-i18n="services.digital.items.0">Tailor-made web i desktop aplikacije za struku</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                </div>
+                                <span data-i18n="services.digital.items.1">M365 ekosustav — PowerApps, Power Automate, Azure Functions</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                </div>
+                                <span data-i18n="services.digital.items.2">Dashboardovi, analitika i vizualizacija podataka</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/></svg>
+                                </div>
+                                <span data-i18n="services.digital.items.3">Digitalna rješenja za javnu nabavu i ugovaranje</span>
+                            </div>
+                            <div class="service-item">
+                                <div class="si-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                                </div>
+                                <span data-i18n="services.digital.items.4">Alati za upravljanje projektima i contract management</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-tools">
+                        <span class="service-tools-label" data-i18n="services.digital.toolsLabel">Aplikacije koje koristimo</span>
+                        <div class="tool-logos">
+                            <a href="https://powerbi.microsoft.com" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="Microsoft Power BI">
+                                <img src="logos/logo digi/Microsoft-Power-BI-Symbol.png" alt="Power BI" class="tool-logo">
+                            </a>
+                            <a href="https://www.microsoft.com/microsoft-365/copilot" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="Microsoft 365 Copilot">
+                                <img src="logos/logo digi/microsoft_365_copilot-logo_brandlogos.net_h3z8h-512x512.png" alt="M365 Copilot" class="tool-logo">
+                            </a>
+                            <a href="https://powerautomate.microsoft.com" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="Microsoft Power Automate">
+                                <img src="logos/logo digi/microsoft_power_automate_logo.png" alt="Power Automate" class="tool-logo">
+                            </a>
+                            <a href="https://superset.apache.org" target="_blank" rel="noopener noreferrer" class="tool-logo-wrap" title="Apache Superset">
+                                <img src="logos/logo digi/superset-logo-stacked-apache.png" alt="Apache Superset" class="tool-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- O nama -->
     <section id="o-nama">
-        <h2 data-i18n="about.title">O nama</h2>
-        <p data-i18n="about.text">Mi smo ovlašteni građevinski inženjeri i statičari u Zadru, specijalizirani za projektiranje konstrukcija, izradu glavnih i izvedbenih projekata te druge građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna digitalna rješenja u građevinarstvu.</p>
+        <div class="section-inner">
+            <div class="section-chip-wrap">
+                <span class="section-chip">O nama</span>
+            </div>
+            <h2 data-i18n="about.title">O nama</h2>
+            <p class="section-lead" data-i18n="about.text">Mi smo ovlašteni građevinski inženjeri i statičari u Zadru, specijalizirani za projektiranje konstrukcija, izradu glavnih i izvedbenih projekata te druge građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna digitalna rješenja u građevinarstvu.</p>
+
+            <div class="about-features">
+                <!-- Feature 1 -->
+                <div class="about-feature fade-in">
+                    <div class="feature-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                            <path d="M6 12H4a2 2 0 0 0-2 2v8h4"/>
+                            <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"/>
+                            <path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="about.f1title">Ovlaštena struka</h4>
+                    <p data-i18n="about.f1text">Licencirani građevinski inženjeri s ovlaštenjem za projektiranje i nadzor.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="about-feature fade-in">
+                    <div class="feature-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="about.f2title">BIM Tehnologija</h4>
+                    <p data-i18n="about.f2text">Moderna digitalna rješenja i BIM alati za precizno projektiranje i koordinaciju.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="about-feature fade-in">
+                    <div class="feature-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="18" r="3"/>
+                            <circle cx="6"  cy="6"  r="3"/>
+                            <path d="M6 21V9a9 9 0 0 0 9 9"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="about.f3title">Integralni pristup</h4>
+                    <p data-i18n="about.f3text">Projektiranje, stručni nadzor i digitalizacija pod jednim krovom.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="about-feature fade-in">
+                    <div class="feature-icon-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="about.f4title">Lokalna ekspertiza</h4>
+                    <p data-i18n="about.f4text">Specijalizirani za tržište i propise Republike Hrvatske — Zadar i cijela zemlja.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Projekti - HIDDEN FOR NOW -->
-    <!--
-    <section id="projekti">
-        <h2>Projekti</h2>
-        <p>Prikaz vaših ranijih projekata s fotografijama ili linkovima.</p>
-    </section>
-    -->
-
-    <!-- Kontakt Form -->
+    <!-- Kontakt -->
     <section id="kontakt">
-        <h2 data-i18n="contact.title">Kontaktirajte nas</h2>
-        <p data-i18n="contact.subtitle">Imate pitanja o projektiranju, glavnom projektu ili digitalnim rješenjima? Kliknite na gumb ispod!</p>
-        
-        <div class="accordions" style="grid-template-columns: 1fr; max-width: 700px;">
-            <div class="accordion-card" id="contact-accordion">
-                <h3 class="accordion-title" data-i18n="contact.formTitle">📧 Pošaljite nam poruku</h3>
-                <div class="accordion-dropdown" id="contact-form-dropdown">
+        <div class="section-inner">
+            <div class="section-chip-wrap">
+                <span class="section-chip">Kontakt</span>
+            </div>
+            <h2 data-i18n="contact.title">Kontaktirajte nas</h2>
+            <p class="section-lead" data-i18n="contact.subtitle">Imate pitanja o projektiranju, glavnom projektu ili digitalnim rješenjima? Javite nam se!</p>
+
+            <div class="contact-layout">
+                <!-- Info kolumna -->
+                <div class="contact-info-col">
+                    <h3 data-i18n="contact.infoTitle">Stupite u kontakt</h3>
+                    <p data-i18n="contact.infoText">Odgovaramo na upite što je moguće brže. Slobodno nam se obratite za svaki upit.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong>Email</strong>
+                                <a href="mailto:info@kti.hr">info@kti.hr</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong data-i18n="contact.locationLabel">Lokacija</strong>
+                                <span>Zadar, 23000, Hrvatska</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                    <path d="M2 12h20"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong>Web</strong>
+                                <a href="https://kti.hr" target="_blank" rel="noopener">kti.hr</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong>TenderAtlas</strong>
+                                <a href="https://tenderatlas.hr" target="_blank" rel="noopener">tenderatlas.hr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form kolumna -->
+                <div class="contact-form-col">
                     <div id="form-message" class="form-message"></div>
                     <form action="https://formspree.io/f/mkogrgyz" method="POST" class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact.name">Ime i prezime *</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.name">Ime i prezime *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact.email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-i18n="contact.phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contact.subject">Predmet *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" data-i18n="contact.phone">Telefon</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" data-i18n="contact.subject">Predmet *</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
+
                         <div class="form-group">
                             <label for="message" data-i18n="contact.message">Poruka *</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        
+
                         <button type="submit" class="submit-btn" data-i18n="contact.submit">Pošalji poruku</button>
                     </form>
                 </div>
@@ -229,22 +460,23 @@
             </div>
             <div>
                 <h3 data-i18n="footer.follow">Pratite nas</h3>
-                <p><a href="#" target="_blank" class="linkedin-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0077b5">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a></p>
+                <p>
+                    <a href="#" target="_blank" class="linkedin-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Copyright Footer -->
     <div class="subfooter">
         <p data-i18n="footer.copyright">Sva prava pridržana Konstrukt Tech Inženjering d.o.o. Svi podaci su informativnog karaktera</p>
     </div>
 
-    <!-- JS (placeholder) -->
     <script src="script.js"></script>
+    <script type="module" src="js/ifc-viewer.js?v=8"></script>
 
 </body>
 </html>

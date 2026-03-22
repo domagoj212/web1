@@ -5,7 +5,7 @@ let currentLang = localStorage.getItem('language') || 'hr';
 // Load translations
 async function loadTranslations() {
     try {
-        const response = await fetch('translations.json');
+        const response = await fetch('translations.json?v=3');
         translations = await response.json();
         updatePageContent();
     } catch (error) {
@@ -18,17 +18,20 @@ function updatePageContent() {
     const t = translations[currentLang];
     if (!t) return;
 
+    // Update html lang attribute for accessibility & SEO
+    document.documentElement.lang = currentLang;
+
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const keys = element.getAttribute('data-i18n').split('.');
         let value = t;
-        
+
         for (const key of keys) {
             value = value?.[key];
         }
-        
-        if (value) {
-            if (element.tagName === 'INPUT' && element.type === 'email') {
+
+        if (value !== undefined && value !== null && typeof value === 'string') {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = value;
             } else {
                 element.innerHTML = value;
@@ -36,34 +39,11 @@ function updatePageContent() {
         }
     });
 
-    // Update service items
-    updateServiceItems();
-    
     // Update language toggle button
     updateLanguageToggle();
-    
+
     // Update page title and meta description
     updateMetaTags();
-}
-
-// Update service list items
-function updateServiceItems() {
-    const t = translations[currentLang];
-    if (!t) return;
-
-    // Engineering services (first card)
-    const engineeringItems = document.querySelector('.accordion-card:nth-child(1) .accordion-dropdown');
-    if (engineeringItems && t.services.engineering.items) {
-        const itemsHTML = t.services.engineering.items.map(item => `<li>${item}</li>`).join('');
-        engineeringItems.innerHTML = `<p class="accordion-lead">${t.services.engineering.desc}</p><ul class="accordion-list">${itemsHTML}</ul>`;
-    }
-
-    // Digital services (second card)
-    const digitalItems = document.querySelector('.accordion-card:nth-child(2) .accordion-dropdown');
-    if (digitalItems && t.services.digital.items) {
-        const itemsHTML = t.services.digital.items.map(item => `<li>${item}</li>`).join('');
-        digitalItems.innerHTML = `<p class="accordion-lead">${t.services.digital.desc}</p><ul class="accordion-list">${itemsHTML}</ul>`;
-    }
 }
 
 // Update language toggle button
@@ -99,10 +79,28 @@ function switchLanguage() {
     updatePageContent();
 }
 
+// Scroll reveal — Intersection Observer
+function initScrollReveal() {
+    const elements = document.querySelectorAll('.fade-in');
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadTranslations();
-    
+    initScrollReveal();
+
     // Add event listener to language toggle button
     const langToggle = document.getElementById('langToggle');
     if (langToggle) {

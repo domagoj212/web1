@@ -9,37 +9,69 @@
     },
     "hero": {
       "title": "Konstrukt Tech Inženjering d.o.o.",
-      "subtitle": "Projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih sofverskih alata, savjetovanje."
+      "subtitle": "Glavni projekti, projektiranje konstrukcija, stručni nadzor građenja, razvoj specijalnih softverskih alata, savjetovanje.",
+      "cta1": "Naše usluge →",
+      "cta2": "Kontaktirajte nas",
+      "pill1": "Ovlašteni inženjeri",
+      "pill2": "BIM Tehnologija",
+      "pill3": "Digitalna rješenja",
+      "ifcHint": "Rotiraj · Zumiraj",
+      "ifcLabel": "BIM Model — Konstruktivni projekt"
     },
     "services": {
       "title": "Naše usluge",
-      "digital": {
-        "title": "Digitalne usluge",
-        "desc": "Usluge razvoja specijalnih digitalnih rješenja i alata za građevinarstvo i srodne struke",
+      "lead": "Graditeljska ekspertiza i digitalna inovacija — pod jednim krovom.",
+      "engineering": {
+        "chip": "Inženjerstvo",
+        "title": "Projektiranje i nadzor",
+        "lead": "Ovlašteni građevinski inženjer u Zadru — glavni i izvedbeni projekti konstrukcija, stručni nadzor i vođenje projekata od ideje do predaje.",
+        "toolsLabel": "Paketi koje koristimo",
         "items": [
-          "Razvoj tailor-made aplikacija i web aplikacija",
-          "Razvoj aplikacija za korporativno okruženje M365 (PowerApps, PowerBI, Azure Functions...)",
-          "Predgotovljeni ili tailor-made dashboardovi i analitike podataka",
-          "Savjetovanje i implementacija digitalnih rješenja u području građevinarstva",
-          "Digitalne usluge u području javne nabave",
-          "Digitalne usluge i alati u području upravljanja projektima gradnje te contract managementa"
+          "Glavni i izvedbeni projekti betonskih i zidanih konstrukcija",
+          "Obnova i rekonstrukcija povijesnih i kamenih građevina",
+          "Projektiranje čeličnih konstrukcija i privremenih skela",
+          "Stručni nadzor stambenih i poslovnih objekata",
+          "Vođenje projekata renovacija i rekonstrukcija"
         ]
       },
-      "engineering": {
-        "title": "Projektiranje i nadzor",
-        "desc": "Glavni i izvedbeni projekti, stručni nadzor i vođenje projekata",
+      "digital": {
+        "chip": "Digitalno",
+        "title": "Digitalne usluge",
+        "lead": "Specijalna digitalna rješenja i pametni alati za građevinarstvo, upravljanje projektima i automatizaciju poslovnih procesa.",
+        "toolsLabel": "Aplikacije koje koristimo",
         "items": [
-          "Glavni i izvedbeni projekti konstrukcija betonskih i zidanih kuća",
-          "Glavni i izvedbeni projekti konstrukcije obnove povijesnih, kamenih i ostalih konstrukcija",
-          "Glavni projekti čeličnih konstrukcija te projekti skele",
-          "Stručni nadzor obiteljskih kuća i stambenih građevina",
-          "Vođenje projekata obiteljskih kuća te renovacija i rekonstrukcija"
+          "Tailor-made web i desktop aplikacije za struku",
+          "M365 ekosustav — PowerApps, Power Automate, Azure Functions",
+          "Dashboardovi, analitika i vizualizacija podataka",
+          "Digitalna rješenja za javnu nabavu i ugovaranje",
+          "Alati za upravljanje projektima i contract management"
         ]
       }
     },
     "about": {
       "title": "O nama",
-      "text": "Mi smo ovlašteni inženjeri građevinarstva i drugi stručnjaci specijalizirani za građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna i digitalna rješenja u građevinarstvu."
+      "text": "Mi smo ovlašteni građevinski inženjeri i statičari u Zadru, specijalizirani za projektiranje konstrukcija, izradu glavnih i izvedbenih projekata te druge građevinske i srodne usluge, s posebnim naglaskom na digitalizaciju i inovativna digitalna rješenja u građevinarstvu.",
+      "f1title": "Ovlaštena struka",
+      "f1text": "Licencirani građevinski inženjeri s ovlaštenjem za projektiranje i nadzor.",
+      "f2title": "BIM Tehnologija",
+      "f2text": "Moderna digitalna rješenja i BIM alati za precizno projektiranje i koordinaciju.",
+      "f3title": "Integralni pristup",
+      "f3text": "Projektiranje, stručni nadzor i digitalizacija pod jednim krovom.",
+      "f4title": "Lokalna ekspertiza",
+      "f4text": "Specijalizirani za tržište i propise Republike Hrvatske — Zadar i cijela zemlja."
+    },
+    "contact": {
+      "title": "Kontaktirajte nas",
+      "subtitle": "Imate pitanja o projektiranju, glavnom projektu ili digitalnim rješenjima? Javite nam se!",
+      "infoTitle": "Stupite u kontakt",
+      "infoText": "Odgovaramo na upite što je moguće brže. Slobodno nam se obratite za svaki upit.",
+      "locationLabel": "Lokacija",
+      "name": "Ime i prezime *",
+      "email": "Email *",
+      "phone": "Telefon",
+      "subject": "Predmet *",
+      "message": "Poruka *",
+      "submit": "Pošalji poruku"
     },
     "footer": {
       "contact": "Kontakt",
@@ -84,37 +116,69 @@
     },
     "hero": {
       "title": "Konstrukt Tech Inženjering d.o.o.",
-      "subtitle": "Structural design, expert construction supervision, specialized software development, consulting."
+      "subtitle": "Licensed structural and civil engineer based in Zadar, Croatia. Structural design, expert supervision, specialized software development and consulting.",
+      "cta1": "Our Services →",
+      "cta2": "Contact Us",
+      "pill1": "Licensed Engineers",
+      "pill2": "BIM Technology",
+      "pill3": "Digital Solutions",
+      "ifcHint": "Rotate · Zoom",
+      "ifcLabel": "BIM Model — Structural Project"
     },
     "services": {
       "title": "Our Services",
-      "digital": {
-        "title": "Digital Services",
-        "desc": "Development of specialized digital solutions and tools for construction and related industries",
+      "lead": "Engineering expertise and digital innovation — under one roof.",
+      "engineering": {
+        "chip": "Engineering",
+        "title": "Structural Design & Supervision",
+        "lead": "Licensed civil engineer in Zadar — structural design, expert supervision and project management from concept to handover.",
+        "toolsLabel": "Software We Use",
         "items": [
-          "Development of tailor-made applications and web applications",
-          "M365 corporate environment applications (PowerApps, PowerBI, Azure Functions...)",
-          "Pre-built or custom dashboards and data analytics",
-          "Consulting and implementation of digital solutions in construction",
-          "Digital services for public procurement",
-          "Digital services and tools for construction project management and contract management"
+          "Structural design for concrete and masonry buildings",
+          "Renovation and reconstruction of historic stone structures",
+          "Steel structure design and temporary scaffolding",
+          "Expert supervision of residential and commercial buildings",
+          "Project management for renovations and reconstructions"
         ]
       },
-      "engineering": {
-        "title": "Design & Supervision",
-        "desc": "Main and detailed projects, expert supervision and project management",
+      "digital": {
+        "chip": "Digital",
+        "title": "Digital Services",
+        "lead": "Specialized digital solutions and smart tools for construction, project management and business process automation.",
+        "toolsLabel": "Applications We Use",
         "items": [
-          "Main and detailed structural projects for concrete and masonry houses",
-          "Main and detailed structural projects for renovation of historic, stone and other structures",
-          "Main projects for steel structures and scaffolding projects",
-          "Expert supervision of residential houses and buildings",
-          "Project management for residential houses, renovations and reconstructions"
+          "Custom-built web and desktop applications for the industry",
+          "M365 ecosystem — PowerApps, Power Automate, Azure Functions",
+          "Dashboards, analytics and data visualization",
+          "Digital solutions for public procurement and contracting",
+          "Project management and contract management tools"
         ]
       }
     },
     "about": {
       "title": "About Us",
-      "text": "We are certified civil engineers and other professionals specialized in construction and related services, with a special focus on digitalization and innovative digital solutions in construction."
+      "text": "We are certified civil engineers and structural designers based in Zadar, specialized in structural design, main and detailed projects, and related construction services — with a particular focus on digitalization and innovative digital solutions in construction.",
+      "f1title": "Licensed Professionals",
+      "f1text": "Certified civil engineers licensed for structural design and expert supervision.",
+      "f2title": "BIM Technology",
+      "f2text": "Modern digital tools and BIM solutions for precise design and project coordination.",
+      "f3title": "Integrated Approach",
+      "f3text": "Structural design, supervision and digitalization — all under one roof.",
+      "f4title": "Local Expertise",
+      "f4text": "Specialized in the Croatian market and regulations — Zadar and nationwide."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Questions about structural design, main projects or digital solutions? Get in touch!",
+      "infoTitle": "Get in Touch",
+      "infoText": "We respond to enquiries as quickly as possible. Feel free to reach out for any question.",
+      "locationLabel": "Location",
+      "name": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "subject": "Subject *",
+      "message": "Message *",
+      "submit": "Send Message"
     },
     "footer": {
       "contact": "Contact",
