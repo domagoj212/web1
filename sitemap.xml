@@ -23,12 +23,19 @@
   <!-- Blog page -->
   <url>
     <loc>https://kti.hr/blog.html</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Blog posts -->
+  <url>
+    <loc>https://kti.hr/blog-posts/javni-poziv-zadar-obnova-procelja-2026.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://kti.hr/blog-posts/digitalna-transformacija-gradjevinarstvo.html</loc>
     <lastmod>2026-01-21</lastmod>
