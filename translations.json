@@ -91,6 +91,12 @@
         "button": "Pretplati se"
       },
       "posts": {
+        "dizala": {
+          "date": "15. Svibanj 2026",
+          "category": "Javni pozivi",
+          "title": "Javni poziv 2026: MPGI sufinancira 2/3 troškova ugradnje dizala u postojeće zgrade",
+          "excerpt": "Ministarstvo prostornoga uređenja sufinancira do 2/3 troškova ugradnje dizala u višestambene zgrade. Rok prijave: 31.8.2026. Izrađujemo Mapu 2 — projekt konstrukcija dizala kao obvezni dio glavnog projekta za prijavu."
+        },
         "javnipoziv": {
           "date": "13. Travanj 2026",
           "category": "Javni pozivi",
@@ -204,6 +210,12 @@
         "button": "Subscribe"
       },
       "posts": {
+        "dizala": {
+          "date": "May 15, 2026",
+          "category": "Public Calls",
+          "title": "Public Call 2026: Ministry Co-finances 2/3 of Lift Installation Costs in Existing Buildings",
+          "excerpt": "The Ministry of Physical Planning co-finances up to 2/3 of the costs of installing lifts in multi-apartment buildings. Application deadline: Aug 31, 2026. We prepare Volume 2 — the structural design of the lift, a mandatory part of the main project for application."
+        },
         "javnipoziv": {
           "date": "April 13, 2026",
           "category": "Public Calls",
